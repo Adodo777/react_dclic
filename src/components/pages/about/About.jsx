@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom"
+
+
 function About() {
 
     return (
 
         <div className="min-h-screen max-w-3xl mx-auto text-center px-10">
-            <h1 className="text-4xl font-bold text-blue-700 mb-4">À propos de moi</h1>
+            <h1 className="text-4xl bg-black text-center p-6 rounded-xl font-bold text-white mb-4">À propos de moi</h1>
             <p className="text-gray-700 text-lg mb-6">
                 Salut 👋, je m'appelle <strong>Kintoho Kouessi Adodo Marcos</strong>, mais tu peux m'appeler Marcos.
                 Je suis un passionné de <strong>design graphique</strong>, de <strong>développement web & mobile</strong>, et d’<strong>entrepreneuriat digital</strong>.
@@ -24,7 +27,7 @@ function About() {
             </div>
 
             <p className="mt-8 text-gray-600">
-                Merci de lire 🙏. Si tu veux échanger, propose-moi un sujet ou laisse-moi un message via mail :<strong><em>marcos.kintoho@outlook.fr</em></strong>.
+                Merci de lire 🙏. Si tu veux échanger, propose-moi un sujet ou laisse-moi un message via mail :<strong><em><Link to="mailto:marcos.kintoho@outlook.fr">marcos.kintoho@outlook.fr</Link></em></strong>.
             </p>
         </div>
 
