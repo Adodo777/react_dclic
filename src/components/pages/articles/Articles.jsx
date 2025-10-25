@@ -28,7 +28,7 @@ function Articles() {
 
     async function getArticles() {
         try {
-            const url = "https://newsapi.org/v2/everything?q=tesla&from=2025-03-17&sortBy=publishedAt&apiKey=f23424d0c86449bb884422fe874f2023"
+            const url = "https://newsapi.org/v2/everything?q=tesla&from=2025-04-22&sortBy=publishedAt&apiKey=7956671204904e4886f4de523f3a1735"
             const response = await axios.get(url);
             const articlesData = response.data.articles;
             const articles = articlesData.filter(article => {

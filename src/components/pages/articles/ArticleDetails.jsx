@@ -2,7 +2,18 @@ import { useParams } from "react-router";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Protypes from "prop-types";
 
+// Définition des types pour l'article
+ArticleDetailsPage.type({
+  // Pas de props externes pour ce composant, mais on peut définir les types internes
+  // Le composant utilise useParams() et useState() en interne
+});
+
+// Valeurs par défaut (optionnel pour ce composant)
+ArticleDetailsPage.defaults({
+  // Pas de props par défaut car le composant ne reçoit pas de props
+});
 
 function ArticleDetailsPage() {
     const { id } = useParams();
@@ -11,7 +22,7 @@ function ArticleDetailsPage() {
     useEffect(() => {
         async function fetchArticle() {
             try {
-                const url = "https://newsapi.org/v2/everything?q=tesla&from=2025-03-17&sortBy=publishedAt&apiKey=f23424d0c86449bb884422fe874f2023"
+                const url = "https://newsapi.org/v2/everything?q=tesla&from=2025-04-22&sortBy=publishedAt&apiKey=7956671204904e4886f4de523f3a1735"
                 const response = await axios.get(url);
                 const articlesData = response.data.articles;
                 const article = articlesData.find((article) => article.publishedAt === id);
